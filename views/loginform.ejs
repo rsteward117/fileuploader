@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('nav') %>
+    <h1><%= title %></h1>
+    <% if (typeof errors != 'undefined'){ %>
+      <ul>
+        <% errors.forEach(function(error){ %>
+          <li><%= error.msg %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+    <form action="" method="POST">
+      <label for="username">Username</label>
+      <input name="username" placeholder="username" type="text" />
+      <br>
+      <label for="password">Password</label>
+      <input name="password" type="password" />
+      <br>
+      <button>Login</button>
+  </body>
+</html>

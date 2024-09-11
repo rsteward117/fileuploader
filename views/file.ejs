@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('nav') %>
+
+    <h1><%= title %>'s details</h1>
+    <h2>file size:<%= file.size %></h2>
+    <h2>created:<%= file.createdAt %></h2>
+
+    <form action="/file/delete/<%= file.id %>" method="post">
+      <button type="submit">Delete this file</button>
+    </form>
+    <a href="<%= file.path %>">download file</a>
+  </body>
+</html>

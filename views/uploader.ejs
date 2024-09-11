@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('nav') %>
+
+    <h1><%= title %></h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <label for="file"></label>
+        <input name="file" type="file" />
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+  </body>
+</html>

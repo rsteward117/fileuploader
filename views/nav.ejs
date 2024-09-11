@@ -1,0 +1,18 @@
+<html>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <% if(currentUser) {%>
+                
+                <li><a href="/auth/logout">log out</a></li>
+                <li><a href="/upload">upload files</a></li>
+                <li><a href="/create/folder">create new folder</a></li>
+              <% } else {%>
+            <li><a href="/auth/signup">Sign up</a></li>
+            <li><a href="/auth/login">Log In</a></li>
+            <% } %>  
+          </ul>
+        </nav>
+      </header>
+</html>

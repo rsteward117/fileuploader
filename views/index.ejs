@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('nav') %>
+
+    <h1>Welcome to <%= title %></h1>
+    <% if(currentUser) {%>
+      <% folders.forEach(function(folder){ %>
+
+        <h2><a href="/folder/<%= folder.id %>"><%= folder.name %></a></h2>
+        <form action="/folder/delete/<%= folder.id %>" method="post">
+          <button type="submit">Delete folder</button>
+        </form>
+      <% }); %>
+      <h2><a href="/create/folder">create a new folder here!</a></h2>            
+    <% } %>  
+
+  </body>
+</html>
